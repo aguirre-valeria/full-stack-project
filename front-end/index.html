@@ -97,15 +97,10 @@
             <div class="mx-auto mb-5" style="width: 100%; max-width: 600px;">
                 <div class="input-group">
                     <div class="input-group-prepend">
-                        <button class="btn btn-outline-light bg-white text-body px-4 dropdown-toggle" type="button" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">Cursos</button>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Diseño Web</a>
-                            <a class="dropdown-item" href="#">Programación</a>
-                            <a class="dropdown-item" href="#">Edición de videos</a>
-                        </div>
+                        <button class="btn btn-outline-light bg-white text-body px-4" type="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">Cursos</button>
                     </div>
-                    <input type="text" class="form-control border-light" style="padding: 30px 25px;" placeholder="Busqueda">
+                    <input type="text" class="form-control border-light" style="padding: 30px 25px;" placeholder="Búsqueda">
                     <div class="input-group-append">
                         <button class="btn btn-secondary px-4 px-lg-5">Buscar</button>
                     </div>
@@ -426,21 +421,30 @@
                         <h1 class="display-4">Envíanos un mensaje</h1>
                     </div>
                     <div class="contact-form">
-                        <form>
+                        <form class="needs-validation" novalidate id="form-message">
                             <div class="row">
                                 <div class="col-6 form-group">
-                                    <input type="text" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="Tu nombre" required="required">
+                                    <input type="text" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="Tu nombre" id="name" required="required">
+                                    <div class="invalid-feedback">
+                                        Ingresa tu nombre.
+                                    </div>
                                 </div>
                                 <div class="col-6 form-group">
-                                    <input type="email" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="Tu E-mail" required="required">
+                                    <input type="email" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="Tu E-mail" id="email" required="required">
+                                    <div class="invalid-feedback">
+                                        Ingresa tu email.
+                                    </div>
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <textarea class="form-control border-top-0 border-right-0 border-left-0 p-0" rows="5" placeholder="Mensaje" required="required"></textarea>
+                                <textarea class="form-control border-top-0 border-right-0 border-left-0 p-0" rows="5" placeholder="Mensaje" id="message" required="required"></textarea>
+                                <div class="invalid-feedback">
+                                    Déjanos un mensaje.
+                                </div>
                             </div>
                             <div>
-                                <button class="btn btn-primary py-3 px-5" type="submit">Enviar mensaje</button>
+                                <button class="btn btn-primary py-3 px-5" type="submit" id="btnSubmitMessage">Enviar mensaje</button>
                             </div>
                         </form>
                     </div>
@@ -464,9 +468,9 @@
                     <h3 class="text-white mb-4">Boletín Informativo</h3>
                     <div class="w-100">
                         <div class="input-group">
-                            <input type="text" class="form-control border-light" style="padding: 30px;" placeholder="Correo electronico">
+                            <input type="text" class="form-control border-light" style="padding: 30px;" placeholder="Correo electronico" required>
                             <div class="input-group-append">
-                                <button class="btn btn-primary px-4">Registrate</button>
+                                <button class="btn btn-primary px-4">Regístrate</button>
                             </div>
                         </div>
                     </div>
@@ -474,7 +478,7 @@
             </div>
             <div class="row">
                 <div class="col-md-4 mb-5">
-                    <h3 class="text-white mb-4">Contactanos En</h3>
+                    <h3 class="text-white mb-4">Contáctanos En</h3>
                         <div class="d-flex justify-content-start mt-4">
                         <a class="text-white mr-4" href="#"><i class="fab fa-2x fa-twitter"></i></a>
                         <a class="text-white mr-4" href="#"><i class="fab fa-2x fa-facebook-f"></i></a>
@@ -513,8 +517,12 @@
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
+    <!-- Sweet Alert -->
+    <script src="./js/sweetalert2.all.min.js"></script>
+
     <!-- Javascripts -->
-    <script src="js/main.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/validate-message-form.js"></script>
 </body>
 
 </html>
