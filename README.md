@@ -1,5 +1,6 @@
 # PROYECTO INTEGRADOR: Educando
 Página educativa de programación donde el usuario podrá buscar, valorar, aportar y definir el curso o material de su elección.
+Link: https://aguirre-valeria.github.io/full-stack-project/front-end/index.html
 
 ## INTEGRANTES
 -	<a href="https://github.com/aguirre-valeria">Aguirre Cintia Valeria Bettiana</a>
