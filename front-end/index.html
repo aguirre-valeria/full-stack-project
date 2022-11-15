@@ -7,7 +7,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="img/ico-educando.ico" rel="icon">
 
     <!-- Fuentes de google-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -81,8 +81,10 @@
                         </div>
                     </div>
                     <a href="#contacto" class="nav-item nav-link">Contacto</a>
+                    <div class="d-flex align-items-center">
+                        <a href="logueo.html" class="btn btn-primary py-2 px-4 d-lg-block" >Ingresar</a>
+                    </div>
                 </div>
-                <a href="logueo.html" class="btn btn-primary py-2 px-4 d-none d-lg-block" >Regístrate</a>
             </div>
         </nav>
     </div>
@@ -97,15 +99,10 @@
             <div class="mx-auto mb-5" style="width: 100%; max-width: 600px;">
                 <div class="input-group">
                     <div class="input-group-prepend">
-                        <button class="btn btn-outline-light bg-white text-body px-4 dropdown-toggle" type="button" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">Cursos</button>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Diseño Web</a>
-                            <a class="dropdown-item" href="#">Programación</a>
-                            <a class="dropdown-item" href="#">Edición de videos</a>
-                        </div>
+                        <button class="btn btn-outline-light bg-white text-body px-4" type="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">Cursos</button>
                     </div>
-                    <input type="text" class="form-control border-light" style="padding: 30px 25px;" placeholder="Busqueda">
+                    <input type="text" class="form-control border-light" style="padding: 30px 25px;" placeholder="Búsqueda">
                     <div class="input-group-append">
                         <button class="btn btn-secondary px-4 px-lg-5">Buscar</button>
                     </div>
@@ -212,7 +209,6 @@
     </div>
 
     <!-- Destacados Fin -->
-
 
     <!-- Cursos Inicio -->
     <div class="container-fluid px-0 py-5">
@@ -339,16 +335,16 @@
                                     <select class="custom-select bg-light border-0 px-3" style="height: 60px;">
                                         <option selected>Selecciona el curso</option>
                                         <option value="1">curso 1</option>
-                                        <option value="2">curso 1</option>
-                                        <option value="3">curso 1</option>
-                                        <option value="1">curso 1</option>
-                                        <option value="2">curso 1</option>
-                                        <option value="3">curso 1</option>
+                                        <option value="2">curso 2</option>
+                                        <option value="3">curso 3</option>
+                                        <option value="1">curso 4</option>
+                                        <option value="2">curso 5</option>
+                                        <option value="3">curso 6</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="col-sm-6">
-                                <button class="btn btn-primary btn-block" type="submit" style="height: 60px;">Regístrate ahora</button>
+                                <a class="btn btn-primary btn-block pt-3" type="submit" href="registro.html" style="height: 60px;">Regístrate ahora</a>
                             </div>
                         </div>
                     </form>
@@ -426,21 +422,30 @@
                         <h1 class="display-4">Envíanos un mensaje</h1>
                     </div>
                     <div class="contact-form">
-                        <form>
+                        <form class="needs-validation" novalidate id="form-message">
                             <div class="row">
                                 <div class="col-6 form-group">
-                                    <input type="text" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="Tu nombre" required="required">
+                                    <input type="text" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="Tu nombre" id="name" required="required">
+                                    <div class="invalid-feedback">
+                                        Ingresa tu nombre.
+                                    </div>
                                 </div>
                                 <div class="col-6 form-group">
-                                    <input type="email" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="Tu E-mail" required="required">
+                                    <input type="email" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="Tu E-mail" id="email" required="required">
+                                    <div class="invalid-feedback">
+                                        Ingresa tu email.
+                                    </div>
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <textarea class="form-control border-top-0 border-right-0 border-left-0 p-0" rows="5" placeholder="Mensaje" required="required"></textarea>
+                                <textarea class="form-control border-top-0 border-right-0 border-left-0 p-0" rows="5" placeholder="Mensaje" id="message" required="required"></textarea>
+                                <div class="invalid-feedback">
+                                    Déjanos un mensaje.
+                                </div>
                             </div>
                             <div>
-                                <button class="btn btn-primary py-3 px-5" type="submit">Enviar mensaje</button>
+                                <button class="btn btn-primary py-3 px-5" type="submit" id="btnSubmitMessage">Enviar mensaje</button>
                             </div>
                         </form>
                     </div>
@@ -458,15 +463,15 @@
                     <a href="index.html" class="navbar-brand">
                         <h1 class="mt-n2 text-uppercase text-white"><i class="fa fa-book-reader mr-3"></i>EDUCANDO</h1>
                     </a>
-                    <p class="m-0">Educando tiene una trayectoria de mas de 45 años en brindar cursos y documentos para la ayuda del aprendizaje de nuestros usuarios</p>
+                    <p class="m-0">Educando está pensanda para que el estudiante se sienta cómodo a la hora de aprender, en una plataforma amigable y con los conocimientos claves para su desarrollo académico.</p>
                 </div>
                 <div class="col-md-6 mb-5">
                     <h3 class="text-white mb-4">Boletín Informativo</h3>
                     <div class="w-100">
                         <div class="input-group">
-                            <input type="text" class="form-control border-light" style="padding: 30px;" placeholder="Correo electronico">
+                            <input type="text" class="form-control border-light" style="padding: 30px;" placeholder="Correo electronico" required>
                             <div class="input-group-append">
-                                <button class="btn btn-primary px-4">Registrate</button>
+                                <button class="btn btn-primary px-4">Regístrate</button>
                             </div>
                         </div>
                     </div>
@@ -474,7 +479,7 @@
             </div>
             <div class="row">
                 <div class="col-md-4 mb-5">
-                    <h3 class="text-white mb-4">Contactanos En</h3>
+                    <h3 class="text-white mb-4">Contáctanos En</h3>
                         <div class="d-flex justify-content-start mt-4">
                         <a class="text-white mr-4" href="#"><i class="fab fa-2x fa-twitter"></i></a>
                         <a class="text-white mr-4" href="#"><i class="fab fa-2x fa-facebook-f"></i></a>
@@ -513,8 +518,12 @@
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
+    <!-- Sweet Alert -->
+    <script src="./js/sweetalert2.all.min.js"></script>
+
     <!-- Javascripts -->
-    <script src="js/main.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/validate-message-form.js"></script>
 </body>
 
 </html>

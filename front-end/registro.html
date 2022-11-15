@@ -68,18 +68,18 @@
         <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
             <div class="navbar-nav mx-auto py-0">
                 <a href="index.html" class="nav-item nav-link active">Inicio</a>
-                <a href="index.html#sobre-nosotros" class="nav-item nav-link">Sobre Nosotros</a>
+                <a href="#sobre-nosotros" class="nav-item nav-link">Sobre Nosotros</a>
                 <a href="cursos.html" class="nav-item nav-link">Cursos</a>
-                <a href="index.html#administradores" class="nav item nav-link">Administradores</a>
+                <a href="#administradores" class="nav item nav-link">Administradores</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Categorías</a>
                     <div class="dropdown-menu m-0">
                         <a href="detalles.html" class="dropdown-item">Detalles de cursos</a>
                     </div>
                 </div>
-                <a href="index.html#contacto" class="nav-item nav-link">Contacto</a>
+                <a href="#contacto" class="nav-item nav-link">Contacto</a>
                 <div class="d-flex align-items-center">
-                  <a href="registro.html" class="btn btn-primary py-2 px-4 d-lg-block" >Regístrate</a>
+                  <a href="logueo.html" class="btn btn-primary py-2 px-4 d-lg-block" >Inicia sesión</a>
               </div>
             </div>
         </div>
@@ -87,52 +87,61 @@
 </div>
 <!-- Navbar -->
 
-<!--Formulario de Login-->
+<!--Formulario de Registro-->
   <section class="p-5 m-5">
     <div class="container py-5 h-100">
       <div class="row d-flex align-items-center justify-content-center h-100">
         <div class="col-md-8 col-lg-7 col-xl-6 login-image w-100">
-          <img src="./img/login.png"
+          <img src="./img/sign-up.png"
             class="img-fluid" alt="..." class="">
         </div>
         <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
-          <form class="needs-validation" novalidate id="form-login">
+          <form class="needs-validation" novalidate id="form-register">
+            <!-- Name input -->
+            <div class="form-outline mb-4">
+              <label class="form-label" for="name">Nombre y apellido</label>
+              <input type="text" id="name" class="form-control form-control-lg" required/>
+              <div class="invalid-feedback">
+                Ingresa tu nombre y apellido.
+              </div>
+            </div>
+
             <!-- Email input -->
             <div class="form-outline mb-4">
-              <label class="form-label" for="form1Example13">Correo electrónico</label>
-              <input type="email" id="form1Example13" class="form-control form-control-lg" required />
+              <label class="form-label" for="email">Correo electrónico</label>
+              <input type="email" id="email" class="form-control form-control-lg" required/>
               <div class="invalid-feedback">
                 Ingresa tu correo electrónico.
             </div>
+              
             </div>
   
             <!-- Password input -->
             <div class="form-outline mb-4">
-              <label class="form-label" for="form1Example23">Contraseña</label>
-              <input type="password" id="form1Example23" alt="strongPass" class="form-control form-control-lg" required/>
+              <label class="form-label" for="password">Contraseña</label>
+              <input type="password" id="password" alt="strongPass" class="form-control form-control-lg" required/>
               <div class="invalid-feedback">
-                Ingresa tu contraseña.
+                Ingresa una contraseña.
             </div>
             </div>
   
-            <div class="d-flex justify-content-around align-items-center mb-4">
+            <div class="d-flex justify-content-start align-items-center mb-4">
               <!-- Checkbox -->
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="form1Example3" checked />
-                <label class="form-check-label" for="form1Example3"> Recuérdame </label>
+                <input class="form-check-input" type="checkbox" value="" id="remember" checked />
+                <label class="form-check-label" for="remember"> Recuérdame </label>
               </div>
-              <a href="#!">¿Olvidaste tu contraseña?</a>
             </div>
   
             <!-- Submit button -->
-            <button type="submit" class="btn btn-primary py-2 px-4 d-lg-block btn-block" >Inicia sesión</button>
+            <button type="submit" id="btnRegister" class="btn btn-primary py-2 px-4 d-lg-block btn-block" >Regístrate</button>
   
             <div class="divider d-flex align-items-center my-4">
-              <p class="text-center fw-bold mx-3 mb-0 text-muted">¿Aún no tienes cuenta en Educando?</p>
+              <p class="text-center fw-bold mx-3 mb-0 text-muted">O</p>
             </div>
   
-            <a class="btn btn-primary py-2 px-4 d-lg-block btn-block" href="registro.html"
-              role="button">Regístrate</a>
+            <a class="btn btn-primary py-2 px-4 d-lg-block btn-block" href="logueo.html"
+              role="button">Inicia sesión</a>
           </form>
         </div>
       </div>
@@ -161,7 +170,7 @@
   <script src="./js/sweetalert2.all.min.js"></script>
 
   <!-- Javascripts -->
-  <script src="./js/validate-login-form.js"></script>
+  <script src="./js/validate-register-form.js"></script>
 
 </body>
 </html>
